@@ -28,3 +28,7 @@ setTimeout(() => {
     }, 500);
 
 }, 5000);
+
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
