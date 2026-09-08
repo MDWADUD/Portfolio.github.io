@@ -1,63 +1,198 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Poppins:wght@800&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Dosis:wght@600&family=Nunito:ital@1&display=swap"
       rel="stylesheet"
     />
+
     <title>MDWADUD</title>
+
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <img class="background" src="images/banner.jpg" alt="laptop" />
-    
-    <p class="hello">h e l l o <span class="world"> W o r l d<span id="loadingDots">.</span></span></p>
-    
-    <p class="role">
-      <span>I am </span><span id="roleText">System Analyst</span>
-    </p>
-    
-    <h1 class="portfolio">Portfo<span class="lio">lio</span></h1>
-    <!-- <div class="options">
-      <ul class="navi">
-        <li class="lil">Contact</li>
-        <li class="lil">Services</li>
-        <li class="lil">Skill</li>
-        <li class="lil">About</li>
-        <li class="lil">Home</li>
-      </ul>
-    </div> -->
-      <div class="options">
-        <button class="menu-button" onclick="toggleMenu()">☰</button>
 
-          <ul class="navi" id="mobileMenu">
-            <li class="lil">Contact</li>
-            <li class="lil">Services</li>
-            <li class="lil">Skill</li>
-            <li class="lil">About</li>
-            <li class="lil">Home</li>
-          </ul>
+    <!-- ========================= -->
+    <!-- PAGE 1: HOME / HERO -->
+    <!-- ========================= -->
+
+    <section class="home-section">
+
+      <img
+        class="background"
+        src="images/banner.jpg"
+        alt="laptop"
+      />
+
+      <p class="hello">
+        h e l l o
+        <span class="world">
+          W o r l d<span id="loadingDots">.</span>
+        </span>
+      </p>
+
+      <p class="role">
+        <span>I am </span>
+        <span id="roleText">System Analyst</span>
+      </p>
+
+      <h1 class="portfolio">
+        Portfo<span class="lio">lio</span>
+      </h1>
+
+      <div class="options">
+
+        <button
+          class="menu-button"
+          onclick="toggleMenu()"
+        >
+          ☰
+        </button>
+
+        <ul class="navi" id="mobileMenu">
+          <li class="lil">Contact</li>
+          <li class="lil">Services</li>
+          <li class="lil">Skill</li>
+          <li class="lil">About</li>
+          <li class="lil">Home</li>
+        </ul>
+
       </div>
 
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- PAGE 2: SERVICES + CONTACT -->
+    <!-- ========================= -->
+
+    <section class="services-profile-section">
+
+      <!-- LEFT: SERVICES -->
+
+      <div class="services reveal">
+
+        <h2>Services</h2>
+
+        <div class="service-item">
+          <h3>System Analysis</h3>
+          <p>
+            System analysis, troubleshooting, and enterprise IT solutions.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Software Development</h3>
+          <p>
+            Python, Java, C#, APIs, and web application development.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>IAM & Security</h3>
+          <p>
+            Identity, access management, authentication, and security solutions.
+          </p>
+        </div>
+
+        <div class="service-item">
+          <h3>Cloud & DevOps</h3>
+          <p>
+            AWS, Azure, Git, CI/CD, automation, and cloud technologies.
+          </p>
+        </div>
+
+      </div>
+
+
+      <!-- RIGHT: PHOTO + CONTACT -->
+
+      <div class="profile-container">
+
+        <div class="profile-image reveal">
+          <img
+            src="images/Shiplu-pic.jpg"
+            alt="Shiplu"
+          />
+        </div>
+
+        <div class="contact-card reveal">
+
+          <h2>Contact</h2>
+
+          <p>
+            <strong>Email</strong><br />
+            <a href="mailto:wadud.cuny@gmail.com">
+              wadud.cuny@gmail.com
+            </a>
+          </p>
+
+          <a
+            class="text-button"
+            href="sms:716-381-7421"
+          >
+            💬 Text Me
+          </a>
+
+          <p>
+            <strong>Work Authorization</strong><br />
+            U.S. Citizen
+          </p>
+
+          <p>
+            <strong>Location</strong><br />
+            Buffalo, NY
+          </p>
+
+          <div class="social-links">
+
+            <a
+              href="https://www.linkedin.com/in/mdwadud"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href="https://github.com/mdwadud"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+
     <script src="script.js"></script>
-  
+
   </body>
 </html>
