@@ -1,7 +1,8 @@
-
 html {
     scroll-behavior: smooth;
 }
+
+
 /* =========================
    GENERAL
 ========================= */
@@ -11,6 +12,19 @@ body {
     min-height: 100vh;
     margin: 0;
 }
+
+
+/* =========================
+   PAGE 1: HOME
+========================= */
+
+.home-section {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
 /* =========================
    PORTFOLIO TEXT
 ========================= */
@@ -23,19 +37,24 @@ body {
     font-size: 30px;
     font-family: "Balsamiq Sans", cursive;
 }
+
 .lio {
     color: #ff0808;
     font-family: "Balsamiq Sans", cursive;
 }
+
+
 /* =========================
    BACKGROUND
 ========================= */
+
 .background {
     position: relative;
     width: 100%;
     top: 85px;
     height: auto;
 }
+
 
 /* =========================
    NAVIGATION BAR
@@ -57,6 +76,7 @@ body {
     right: 0;
     top: 20px;
 }
+
 .lil {
     color: white;
     text-align: center;
@@ -66,9 +86,21 @@ body {
     font-size: 14px;
     font-family: "Balsamiq Sans", cursive;
 }
+
+.navi .lil a {
+    color: white;
+    text-decoration: none;
+}
+
+.navi .lil a:hover {
+    color: #ff0808;
+}
+
+
 /* =========================
    HELLO WORLD
 ========================= */
+
 .hello {
     position: absolute;
     top: 180px;
@@ -84,11 +116,17 @@ body {
 
     animation: cloudReveal 3s ease-out 2;
 }
+
 .world {
     color: white;
     font-style: normal;
 }
-/* Hello World Animation */
+
+
+/* =========================
+   HELLO WORLD ANIMATION
+========================= */
+
 @keyframes cloudReveal {
 
     0% {
@@ -103,9 +141,12 @@ body {
         transform: scale(1);
     }
 }
+
+
 /* =========================
    ROLE
 ========================= */
+
 .role {
     position: absolute;
     top: 215px;
@@ -123,70 +164,73 @@ body {
 
     z-index: 2;
 }
+
 .role span:first-child {
     color: white;
 }
+
+
 /* Keep role text from moving */
+
 #roleText {
     display: inline-block;
-
     width: 220px;
-
     text-align: left;
-
     white-space: nowrap;
 }
+
+
 /* Loading dots */
+
 #loadingDots {
     display: inline-block;
-
     width: 3ch;
-
     text-align: left;
 }
+
+
 /* =========================
    HAMBURGER BUTTON
 ========================= */
+
 .menu-button {
     display: none;
 }
+
+
 /* =========================
-   SERVICES + PROFILE
+   PAGE 2: SERVICES + CONTACT
 ========================= */
-/* =========================
-   PAGE 1
-========================= */
-.home-section {
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-/* =========================
-   PAGE 2
-========================= */
+
 .services-profile-section {
     min-height: 100vh;
     padding: 100px 8% 60px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 50px;
+
     background-color: #000;
+
     box-sizing: border-box;
 }
+
+
 /* =========================
    SERVICES - LEFT SIDE
 ========================= */
-.services {
 
+.services {
     width: 42%;
 
     color: white;
 
     font-family: "Balsamiq Sans", sans-serif;
 }
-.services h2 {
 
+.services h2 {
     color: #ff0808;
 
     font-size: 25px;
@@ -195,12 +239,12 @@ body {
 
     margin: 0 0 18px 0;
 }
-.service-item {
 
+.service-item {
     margin-bottom: 14px;
 }
-.service-item h3 {
 
+.service-item h3 {
     color: white;
 
     font-size: 16px;
@@ -209,8 +253,8 @@ body {
 
     margin: 0 0 3px 0;
 }
-.service-item p {
 
+.service-item p {
     color: #cfcfcf;
 
     font-size: 12px;
@@ -219,11 +263,13 @@ body {
 
     margin: 0;
 }
+
+
 /* =========================
    RIGHT SIDE
 ========================= */
-.profile-container {
 
+.profile-container {
     width: 48%;
 
     display: flex;
@@ -234,17 +280,19 @@ body {
 
     gap: 25px;
 }
+
+
 /* =========================
    PROFILE PICTURE
 ========================= */
-.profile-image {
 
+.profile-image {
     width: 130px;
 
     flex-shrink: 0;
 }
-.profile-image img {
 
+.profile-image img {
     width: 130px;
 
     height: 165px;
@@ -255,19 +303,21 @@ body {
 
     display: block;
 }
+
+
 /* =========================
    CONTACT CARD
 ========================= */
-.contact-card {
 
+.contact-card {
     color: white;
 
     font-family: "Balsamiq Sans", sans-serif;
 
     min-width: 0;
 }
-.contact-card h2 {
 
+.contact-card h2 {
     color: white;
 
     font-size: 23px;
@@ -276,41 +326,37 @@ body {
 
     margin: 0 0 14px 0;
 }
-.contact-card p {
 
+.contact-card p {
     font-size: 12px;
 
     line-height: 1.25;
 
     margin: 0 0 10px 0;
 }
-.contact-card strong {
 
+.contact-card strong {
     color: #ff0808;
 
     font-weight: normal;
 }
+
 .contact-card a {
+    color: white;
 
-    color: white;
     text-decoration: none;
 }
-.navi .lil a {
-    color: white;
-    text-decoration: none;
-}
-.navi .lil a:hover {
-    color: #ff0808;
-}
+
 .contact-card a:hover {
-
     color: #ff0808;
 }
+
+
 /* =========================
    TEXT BUTTON
 ========================= */
-.text-button {
 
+.text-button {
     display: inline-block;
 
     padding: 6px 14px;
@@ -329,40 +375,174 @@ body {
         background-color 0.4s ease,
         transform 0.4s ease;
 }
-.text-button:hover {
 
+.text-button:hover {
     background-color: #ff0808;
 
     transform: translateY(-1px);
 }
+
+
 /* =========================
    LINKEDIN / GITHUB
 ========================= */
-.social-links {
 
+.social-links {
     display: flex;
 
     gap: 16px;
 
     margin-top: 4px;
 }
-.social-links a {
 
+.social-links a {
     font-size: 12px;
 
     color: white;
 
     text-decoration: none;
 }
-.social-links a:hover {
 
+.social-links a:hover {
     color: #ff0808;
 }
+
+
+/* =========================
+   PAGE 3: SKILLS
+========================= */
+
+.skill-section {
+    min-height: 100vh;
+
+    padding: 100px 8% 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #000;
+
+    box-sizing: border-box;
+}
+
+.skill-content {
+    width: 80%;
+
+    color: white;
+
+    font-family: "Balsamiq Sans", sans-serif;
+
+    text-align: center;
+}
+
+.skill-content h2 {
+    color: #ff0808;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin: 0 0 35px 0;
+}
+
+.skill-category {
+    margin-bottom: 25px;
+}
+
+.skill-category h3 {
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: normal;
+
+    margin: 0 0 12px 0;
+}
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.skill-list span {
+    color: white;
+
+    border: 1px solid #ff0808;
+
+    border-radius: 20px;
+
+    padding: 7px 14px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   PAGE 4: ABOUT
+========================= */
+
+.about-section {
+    min-height: 100vh;
+
+    padding: 100px 8% 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #000;
+
+    box-sizing: border-box;
+}
+
+.about-content {
+    width: 70%;
+
+    color: white;
+
+    font-family: "Balsamiq Sans", sans-serif;
+
+    text-align: center;
+}
+
+.about-content h2 {
+    color: #ff0808;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin: 0 0 30px 0;
+}
+
+.about-content p {
+    color: #cfcfcf;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0 auto 20px auto;
+
+    max-width: 700px;
+}
+
+
 /* =========================
    SMOOTH SCROLL REVEAL
 ========================= */
-.reveal {
 
+.reveal {
     opacity: 0;
 
     transform: translateY(25px);
@@ -373,22 +553,25 @@ body {
 
     will-change: opacity, transform;
 }
-.reveal.visible {
 
+.reveal.visible {
     opacity: 1;
 
     transform: translateY(0);
 }
+
+
 /* =========================
    MOBILE
 ========================= */
+
 @media (max-width: 600px) {
 
-
-    /* Background */
+    /* =========================
+       BACKGROUND
+    ========================= */
 
     .background {
-
         position: relative;
 
         top: 70px;
@@ -401,10 +584,11 @@ body {
     }
 
 
-    /* Hello World */
+    /* =========================
+       HELLO WORLD
+    ========================= */
 
     .hello {
-
         top: 70px;
 
         font-size: 20px;
@@ -415,10 +599,11 @@ body {
     }
 
 
-    /* Role */
+    /* =========================
+       ROLE
+    ========================= */
 
     .role {
-
         top: 110px;
 
         font-size: 15px;
@@ -428,19 +613,18 @@ body {
         line-height: 1;
     }
 
-
     #roleText {
-
         width: 170px;
 
         white-space: nowrap;
     }
 
 
-    /* Portfolio */
+    /* =========================
+       PORTFOLIO
+    ========================= */
 
     .portfolio {
-
         top: 10px;
 
         left: 15px;
@@ -449,20 +633,22 @@ body {
     }
 
 
-    /* Navigation */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     .options {
-
         width: 100%;
 
         top: 5px;
     }
 
 
-    /* Hamburger */
+    /* =========================
+       HAMBURGER
+    ========================= */
 
     .menu-button {
-
         display: block;
 
         position: absolute;
@@ -483,10 +669,11 @@ body {
     }
 
 
-    /* Mobile Menu */
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
     .navi {
-
         display: block;
 
         position: absolute;
@@ -517,9 +704,7 @@ body {
             visibility 2s;
     }
 
-
     .navi.show {
-
         opacity: 1;
 
         visibility: visible;
@@ -530,10 +715,11 @@ body {
     }
 
 
-    /* Menu Items */
+    /* =========================
+       MENU ITEMS
+    ========================= */
 
     .lil {
-
         float: none;
 
         display: block;
@@ -547,42 +733,39 @@ body {
 
 
     /* =========================
-       SERVICES + PROFILE
+       SERVICES + CONTACT
     ========================= */
 
-.services-profile-section {
-    min-height: 100vh;
-    flex-direction: column;
-    padding: 80px 25px 50px;
-    gap: 45px;
-    box-sizing: border-box;
-}
+    .services-profile-section {
+        min-height: 100vh;
+
+        flex-direction: column;
+
+        padding: 80px 25px 50px;
+
+        gap: 45px;
+
+        box-sizing: border-box;
+    }
 
 
     /* Services */
 
     .services {
-
         width: 100%;
 
         text-align: center;
     }
 
-
     .services h2 {
-
         font-size: 23px;
     }
 
-
     .service-item h3 {
-
         font-size: 15px;
     }
 
-
     .service-item p {
-
         font-size: 12px;
     }
 
@@ -590,7 +773,6 @@ body {
     /* Profile */
 
     .profile-container {
-
         width: 100%;
 
         flex-direction: row;
@@ -604,13 +786,10 @@ body {
     /* Picture */
 
     .profile-image {
-
         width: 105px;
     }
 
-
     .profile-image img {
-
         width: 105px;
 
         height: 135px;
@@ -620,7 +799,6 @@ body {
     /* Contact */
 
     .contact-card {
-
         width: auto;
 
         min-width: 0;
@@ -628,21 +806,15 @@ body {
         text-align: left;
     }
 
-
     .contact-card h2 {
-
         font-size: 20px;
     }
 
-
     .contact-card p {
-
         font-size: 11px;
     }
 
-
     .text-button {
-
         font-size: 11px;
 
         padding: 5px 12px;
@@ -652,28 +824,96 @@ body {
     /* Social */
 
     .social-links {
-
         gap: 12px;
 
         justify-content: flex-start;
     }
 
-
     .social-links a {
-
         font-size: 11px;
     }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skill-section {
+        min-height: 100vh;
+
+        padding: 80px 25px 50px;
+    }
+
+    .skill-content {
+        width: 100%;
+    }
+
+    .skill-content h2 {
+        font-size: 23px;
+
+        margin-bottom: 30px;
+    }
+
+    .skill-category {
+        margin-bottom: 22px;
+    }
+
+    .skill-category h3 {
+        font-size: 15px;
+    }
+
+    .skill-list {
+        gap: 8px;
+    }
+
+    .skill-list span {
+        font-size: 11px;
+
+        padding: 6px 11px;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+        min-height: 100vh;
+
+        padding: 80px 25px 50px;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: 23px;
+
+        margin-bottom: 25px;
+    }
+
+    .about-content p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
 }
+
+
 /* =========================
    IPAD / TABLET
 ========================= */
+
 @media (min-width: 601px) and (max-width: 1024px) {
 
 
-    /* Portfolio */
+    /* =========================
+       PORTFOLIO
+    ========================= */
 
     .portfolio {
-
         top: 18px;
 
         left: 25px;
@@ -682,34 +922,32 @@ body {
     }
 
 
-    /* Navigation */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     .options {
-
         width: 96%;
 
         top: 5px;
     }
 
-
     .navi {
-
         top: 15px;
     }
 
-
     .lil {
-
         font-size: 14px;
 
         padding: 6px 8px;
     }
 
 
-    /* Hello World */
+    /* =========================
+       HELLO WORLD
+    ========================= */
 
     .hello {
-
         top: 140px;
 
         font-size: 40px;
@@ -720,10 +958,11 @@ body {
     }
 
 
-    /* Role */
+    /* =========================
+       ROLE
+    ========================= */
 
     .role {
-
         top: 190px;
 
         font-size: 21px;
@@ -733,19 +972,18 @@ body {
         line-height: 1;
     }
 
-
     #roleText {
-
         width: 190px;
 
         white-space: nowrap;
     }
 
 
-    /* Background */
+    /* =========================
+       BACKGROUND
+    ========================= */
 
     .background {
-
         top: 75px;
 
         width: 100%;
@@ -754,27 +992,28 @@ body {
     }
 
 
-    /* Services + Profile */
+    /* =========================
+       SERVICES + CONTACT
+    ========================= */
 
     .services-profile-section {
-    min-height: 100vh;
-    padding: 90px 6% 60px;
-    gap: 35px;
-    box-sizing: border-box;
-    
+        min-height: 100vh;
+
+        padding: 90px 6% 60px;
+
+        gap: 35px;
+
+        box-sizing: border-box;
     }
 
 
     /* Services */
 
     .services {
-
         width: 43%;
     }
 
-
     .services h2 {
-
         font-size: 24px;
     }
 
@@ -782,21 +1021,16 @@ body {
     /* Profile */
 
     .profile-container {
-
         width: 52%;
 
         gap: 20px;
     }
 
-
     .profile-image {
-
         width: 120px;
     }
 
-
     .profile-image img {
-
         width: 120px;
 
         height: 155px;
@@ -806,19 +1040,85 @@ body {
     /* Contact */
 
     .contact-card {
-
         min-width: 200px;
     }
 
-
     .contact-card h2 {
-
         font-size: 22px;
     }
 
-
     .contact-card p {
-
         font-size: 13px;
     }
+
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skill-section {
+        min-height: 100vh;
+
+        padding: 90px 6% 60px;
+    }
+
+    .skill-content {
+        width: 85%;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-section {
+        min-height: 100vh;
+
+        padding: 90px 6% 60px;
+    }
+
+    .about-content {
+        width: 80%;
+    }
+
 }
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+/* Visible keyboard focus */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #ff0808;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+

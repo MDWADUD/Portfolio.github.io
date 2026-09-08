@@ -1,13 +1,24 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================= -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
@@ -24,18 +35,30 @@
       rel="stylesheet"
     />
 
+    <!-- =========================
+         WEBSITE TITLE
+    ========================= -->
+
     <title>MDWADUD</title>
 
+    <!-- =========================
+         CSS
+    ========================= -->
+
     <link rel="stylesheet" href="style.css" />
+
   </head>
+
 
   <body>
 
-    <!-- ========================= -->
-    <!-- PAGE 1: HOME / HERO -->
-    <!-- ========================= -->
+    <!-- =====================================================
+         PAGE 1: HOME / HERO
+    ====================================================== -->
 
     <section class="home-section" id="home">
+
+      <!-- Background Image -->
 
       <img
         class="background"
@@ -43,23 +66,51 @@
         alt="laptop"
       />
 
+
+      <!-- Hello World -->
+
       <p class="hello">
+
         h e l l o
+
         <span class="world">
+
           W o r l d<span id="loadingDots">.</span>
+
         </span>
+
       </p>
+
+
+      <!-- Professional Role -->
 
       <p class="role">
+
         <span>I am </span>
-        <span id="roleText">System Analyst</span>
+
+        <span id="roleText">
+          System Analyst
+        </span>
+
       </p>
 
+
+      <!-- Portfolio Title -->
+
       <h1 class="portfolio">
+
         Portfo<span class="lio">lio</span>
+
       </h1>
 
+
+      <!-- =========================
+           NAVIGATION
+      ========================= -->
+
       <div class="options">
+
+        <!-- Mobile Menu Button -->
 
         <button
           class="menu-button"
@@ -68,82 +119,159 @@
           ☰
         </button>
 
-  <ul class="navi" id="mobileMenu">
-    <li class="lil"><a href="#contact">Contact</a></li>
-    <li class="lil"><a href="#services">Services</a></li>
-    <li class="lil">Skill</li>
-    <li class="lil">About</li>
-    <li class="lil"><a href="#home">Home</a></li>
-</ul>
+
+        <!-- Navigation Menu -->
+
+        <ul class="navi" id="mobileMenu">
+
+          <li class="lil">
+            <a href="#contact">Contact</a>
+          </li>
+
+          <li class="lil">
+            <a href="#services">Services</a>
+          </li>
+
+          <li class="lil">
+            <a href="#skill">Skill</a>
+          </li>
+
+          <li class="lil">
+            <a href="#about">About</a>
+          </li>
+
+          <li class="lil">
+            <a href="#home">Home</a>
+          </li>
+
+        </ul>
 
       </div>
 
     </section>
 
 
-    <!-- ========================= -->
-    <!-- PAGE 2: SERVICES + CONTACT -->
-    <!-- ========================= -->
 
-    <section class="services-profile-section" id="services">
+    <!-- =====================================================
+         PAGE 2: SERVICES + CONTACT
+    ====================================================== -->
 
-      <!-- LEFT: SERVICES -->
+    <section
+      class="services-profile-section"
+      id="services"
+    >
+
+      <!-- =========================
+           LEFT: SERVICES
+      ========================= -->
 
       <div class="services reveal">
 
         <h2>Services</h2>
+
+
+        <!-- Service 1 -->
+
         <div class="service-item">
+
           <h3>System Analysis</h3>
+
           <p>
-            System analysis, troubleshooting, and enterprise IT solutions.
+            System analysis, troubleshooting, and enterprise
+            IT solutions.
           </p>
+
         </div>
 
+
+        <!-- Service 2 -->
+
         <div class="service-item">
+
           <h3>Software Development</h3>
+
           <p>
-            Python, Java, C#, APIs, and web application development.
+            Python, Java, C#, APIs, and web application
+            development.
           </p>
+
         </div>
 
-        <div class="service-item">
-          <h3>IAM & Security</h3>
-          <p>
-            Identity, access management, authentication, and security solutions.
-          </p>
-        </div>
+
+        <!-- Service 3 -->
 
         <div class="service-item">
-          <h3>Cloud & DevOps</h3>
+
+          <h3>IAM &amp; Security</h3>
+
           <p>
-            AWS, Azure, Git, CI/CD, automation, and cloud technologies.
+            Identity, access management, authentication,
+            and security solutions.
           </p>
+
+        </div>
+
+
+        <!-- Service 4 -->
+
+        <div class="service-item">
+
+          <h3>Cloud &amp; DevOps</h3>
+
+          <p>
+            AWS, Azure, Git, CI/CD, automation,
+            and cloud technologies.
+          </p>
+
         </div>
 
       </div>
 
 
-      <!-- RIGHT: PHOTO + CONTACT -->
+
+      <!-- =========================
+           RIGHT: PHOTO + CONTACT
+      ========================= -->
 
       <div class="profile-container">
 
+
+        <!-- Profile Picture -->
+
         <div class="profile-image reveal">
+
           <img
-            src="images/Shiplu-pic.jpg"
+            src="images/Shiplu-pic88.jpg"
             alt="Shiplu"
           />
+
         </div>
 
-        <div class="contact-card reveal" id="contact">
+
+        <!-- Contact Information -->
+
+        <div
+          class="contact-card reveal"
+          id="contact"
+        >
 
           <h2>Contact</h2>
 
+
+          <!-- Email -->
+
           <p>
+
             <strong>Email</strong><br />
+
             <a href="mailto:wadud.cuny@gmail.com">
               wadud.cuny@gmail.com
             </a>
+
           </p>
+
+
+          <!-- Text -->
 
           <a
             class="text-button"
@@ -152,15 +280,30 @@
             💬 Text Me
           </a>
 
-          <p>
-            <strong>Work Authorization</strong><br />
-            U.S. Citizen
-          </p>
+
+          <!-- Work Authorization -->
 
           <p>
-            <strong>Location</strong><br />
-            Buffalo, NY
+
+            <strong>Work Authorization</strong><br />
+
+            U.S. Citizen
+
           </p>
+
+
+          <!-- Location -->
+
+          <p>
+
+            <strong>Location</strong><br />
+
+            Buffalo, NY
+
+          </p>
+
+
+          <!-- Social Links -->
 
           <div class="social-links">
 
@@ -189,7 +332,115 @@
     </section>
 
 
-    <!-- JavaScript -->
+
+    <!-- =====================================================
+         PAGE 3: SKILLS
+    ====================================================== -->
+
+    <section
+      class="skill-section"
+      id="skill"
+    >
+
+      <div class="skill-content">
+
+        <h2>Skills</h2>
+
+
+        <!-- Programming -->
+
+        <div class="skill-category">
+
+          <h3>Programming</h3>
+
+          <div class="skill-list">
+
+            <span>Python</span>
+            <span>Java</span>
+            <span>C#</span>
+            <span>SQL</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Cloud -->
+
+        <div class="skill-category">
+
+          <h3>Cloud &amp; DevOps</h3>
+
+          <div class="skill-list">
+
+            <span>AWS</span>
+            <span>Azure</span>
+            <span>Git</span>
+            <span>CI/CD</span>
+            <span>DevOps</span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Systems & Security -->
+
+        <div class="skill-category">
+
+          <h3>Systems &amp; Security</h3>
+
+          <div class="skill-list">
+
+            <span>Linux</span>
+            <span>IAM</span>
+            <span>REST APIs</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAGE 4: ABOUT
+    ====================================================== -->
+
+    <section
+      class="about-section"
+      id="about"
+    >
+
+      <div class="about-content">
+
+        <h2>About</h2>
+
+
+        <p>
+          I am an IT Analyst and Systems Analyst with experience
+          in enterprise IT, software development, cloud technologies,
+          and identity and access management.
+        </p>
+
+
+        <p>
+          I work with Python, Java, C#, SQL, AWS, Azure, Linux,
+          Git, REST APIs, and enterprise systems.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="script.js"></script>
 
