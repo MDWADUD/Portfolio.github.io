@@ -32,3 +32,24 @@ setTimeout(() => {
 function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("show");
 }
+
+// Scroll reveal for profile section
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+        });
+    },
+    {
+        threshold: 0.15,
+        rootMargin: "0px 0px -80px 0px"
+    }
+);
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
