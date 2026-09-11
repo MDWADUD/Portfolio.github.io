@@ -33,6 +33,24 @@ function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("show");
 }
 
+
+/* Close mobile menu when clicking outside */
+
+document.addEventListener("click", (event) => {
+
+    const menu = document.getElementById("mobileMenu");
+    const button = document.querySelector(".menu-button");
+
+    if (
+        menu.classList.contains("show") &&
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.classList.remove("show");
+    }
+
+});
+
 // Scroll reveal for profile section
 const revealElements = document.querySelectorAll(".reveal");
 
