@@ -7,10 +7,16 @@ html {
    GENERAL
 ========================= */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: #000;
+    color: white;
     min-height: 100vh;
     margin: 0;
+    font-family: "Balsamiq Sans", sans-serif;
 }
 
 
@@ -20,6 +26,7 @@ body {
 
 .home-section {
     min-height: 100vh;
+    height: 100vh;
     position: relative;
     overflow: hidden;
 }
@@ -30,12 +37,13 @@ body {
 ========================= */
 
 .portfolio {
-    color: rgb(255, 255, 255);
+    color: white;
     top: 20px;
     position: absolute;
     left: 30px;
     font-size: 30px;
     font-family: "Balsamiq Sans", cursive;
+    z-index: 20;
 }
 
 .lio {
@@ -49,10 +57,12 @@ body {
 ========================= */
 
 .background {
-    position: relative;
+    position: absolute;
     width: 100%;
-    top: 85px;
     height: auto;
+    left: 0;
+    top: 85px;
+    display: block;
 }
 
 
@@ -65,8 +75,9 @@ body {
     text-align: center;
     position: fixed;
     top: 0;
+    right: 0;
     width: 97%;
-    z-index: 10;
+    z-index: 100;
 }
 
 .navi {
@@ -75,6 +86,8 @@ body {
     position: relative;
     right: 0;
     top: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .lil {
@@ -149,7 +162,7 @@ body {
 
 .role {
     position: absolute;
-    top: 215px;
+    top: 245px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -169,18 +182,12 @@ body {
     color: white;
 }
 
-
-/* Keep role text from moving */
-
 #roleText {
     display: inline-block;
     width: 220px;
     text-align: left;
     white-space: nowrap;
 }
-
-
-/* Loading dots */
 
 #loadingDots {
     display: inline-block;
@@ -204,13 +211,14 @@ body {
 
 .services-profile-section {
     min-height: 100vh;
-    padding: 100px 8% 60px;
+
+    padding: 80px 8% 50px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 50px;
+    gap: 40px;
 
     background-color: #000;
 
@@ -288,7 +296,6 @@ body {
 
 .profile-image {
     width: 130px;
-
     flex-shrink: 0;
 }
 
@@ -409,13 +416,442 @@ body {
 
 
 /* =========================
-   PAGE 3: SKILLS
+   PAGE 3: EXPERIENCE
+========================= */
+
+.experience-section {
+    min-height: 100vh;
+
+    padding: 80px 8% 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #000;
+
+    box-sizing: border-box;
+}
+
+.experience-content {
+    width: 80%;
+
+    color: white;
+
+    font-family: "Balsamiq Sans", sans-serif;
+
+    text-align: center;
+}
+
+.experience-content > h2 {
+    color: #ff0808;
+
+    font-size: 25px;
+
+    font-weight: normal;
+
+    margin: 0 0 30px 0;
+}
+
+
+/* =========================
+   EXPERIENCE CAROUSEL
+========================= */
+
+.experience-carousel {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    position: relative;
+}
+
+.experience-track {
+    width: 400px;
+
+    min-height: 220px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+
+/* =========================
+   EXPERIENCE CARD
+========================= */
+
+.experience-item {
+    width: 400px;
+
+    min-width: 400px;
+
+    min-height: 220px;
+
+    box-sizing: border-box;
+
+    padding: 25px;
+
+    display: none;
+
+    cursor: pointer;
+
+    border: 1px solid #ff0808;
+
+    border-radius: 10px;
+
+    background-color: #080808;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+
+    text-align: left;
+}
+
+
+/* =========================
+   ACTIVE EXPERIENCE
+========================= */
+
+.experience-item.active {
+    display: block;
+
+    animation: experienceSlideIn 0.5s ease;
+}
+
+
+/* =========================
+   EXPERIENCE SLIDE ANIMATION
+========================= */
+
+@keyframes experienceSlideIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(40px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================
+   EXPERIENCE TITLE
+========================= */
+
+.experience-item h3 {
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: normal;
+
+    margin: 0 0 10px 0;
+}
+
+
+/* =========================
+   EXPERIENCE COMPANY
+========================= */
+
+.experience-company {
+    color: #ff0808;
+
+    font-size: 14px;
+
+    margin: 5px 0;
+}
+
+
+/* =========================
+   EXPERIENCE DATE
+========================= */
+
+.experience-date {
+    color: #888;
+
+    font-size: 11px;
+
+    margin: 8px 0 15px 0;
+}
+
+
+/* =========================
+   EXPERIENCE DESCRIPTION
+========================= */
+
+.experience-description {
+    color: #cfcfcf;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================
+   EXPERIENCE ARROWS
+========================= */
+
+.experience-arrow {
+    width: 35px;
+
+    height: 35px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #ff0808;
+
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.experience-arrow:hover {
+    background-color: #ff0808;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   EXPERIENCE DOTS
+========================= */
+
+.experience-dots {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.experience-dots span {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background-color: #555;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.experience-dots span.active {
+    background-color: #ff0808;
+
+    transform: scale(1.3);
+}
+
+
+/* =========================
+   ADD EXPERIENCE BUTTON
+========================= */
+
+#addExperienceButton {
+    margin-top: 25px;
+
+    padding: 7px 16px;
+
+    border: 1px solid #ff0808;
+
+    border-radius: 20px;
+
+    background-color: transparent;
+
+    color: white;
+
+    font-family: "Balsamiq Sans", sans-serif;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+#addExperienceButton:hover {
+    background-color: #ff0808;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   EXPERIENCE SLIDE FORM
+========================= */
+
+.experience-form {
+    position: fixed;
+
+    top: 0;
+
+    right: 0;
+
+    width: 350px;
+
+    height: 100vh;
+
+    padding: 80px 30px 30px;
+
+    box-sizing: border-box;
+
+    background-color: #000;
+
+    border-left: 1px solid #ff0808;
+
+    z-index: 9999;
+
+    transform: translateX(100%);
+
+    transition: transform 0.5s ease;
+}
+
+.experience-form.show {
+    transform: translateX(0);
+}
+
+.experience-form h3 {
+    color: #ff0808;
+
+    font-family: "Balsamiq Sans", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    margin: 0 0 25px 0;
+}
+
+.experience-form input,
+.experience-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin-bottom: 15px;
+
+    padding: 10px;
+
+    background-color: #111;
+
+    border: 1px solid #444;
+
+    border-radius: 5px;
+
+    color: white;
+
+    font-family: "Balsamiq Sans", sans-serif;
+}
+
+.experience-form textarea {
+    height: 100px;
+
+    resize: vertical;
+}
+
+.experience-form input:focus,
+.experience-form textarea:focus {
+    outline: none;
+
+    border-color: #ff0808;
+}
+
+.close-experience-form {
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.close-experience-form:hover {
+    color: #ff0808;
+}
+
+#saveExperienceButton {
+    margin-top: 20px;
+
+    padding: 8px 18px;
+
+    border: 1px solid #ff0808;
+
+    border-radius: 20px;
+
+    background: transparent;
+
+    color: white;
+
+    font-family: "Balsamiq Sans", sans-serif;
+
+    cursor: pointer;
+}
+
+#saveExperienceButton:hover {
+    background-color: #ff0808;
+}
+
+
+/* =========================
+   PAGE 4: SKILLS
 ========================= */
 
 .skill-section {
     min-height: 100vh;
 
-    padding: 100px 8% 60px;
+    padding: 80px 8% 50px;
 
     display: flex;
 
@@ -482,17 +918,19 @@ body {
     padding: 7px 14px;
 
     font-size: 12px;
+
+    background-color: #080808;
 }
 
 
 /* =========================
-   PAGE 4: ABOUT
+   PAGE 5: ABOUT
 ========================= */
 
 .about-section {
     min-height: 100vh;
 
-    padding: 100px 8% 60px;
+    padding: 80px 8% 50px;
 
     display: flex;
 
@@ -568,13 +1006,20 @@ body {
 @media (max-width: 600px) {
 
     /* =========================
-       BACKGROUND
+       HOME
     ========================= */
 
+    .home-section {
+        min-height: 100vh;
+        height: 100vh;
+    }
+
     .background {
-        position: relative;
+        position: absolute;
 
         top: 70px;
+
+        left: 0;
 
         width: 100%;
 
@@ -666,6 +1111,8 @@ body {
         font-size: 28px;
 
         cursor: pointer;
+
+        z-index: 101;
     }
 
 
@@ -688,7 +1135,9 @@ body {
 
         margin: 0;
 
-        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.95);
+
+        border: 1px solid #333;
 
         opacity: 0;
 
@@ -699,9 +1148,9 @@ body {
             scale(0.95);
 
         transition:
-            opacity 2s ease,
-            transform 2s ease,
-            visibility 2s;
+            opacity 0.4s ease,
+            transform 0.4s ease,
+            visibility 0.4s;
     }
 
     .navi.show {
@@ -748,9 +1197,6 @@ body {
         box-sizing: border-box;
     }
 
-
-    /* Services */
-
     .services {
         width: 100%;
 
@@ -770,7 +1216,9 @@ body {
     }
 
 
-    /* Profile */
+    /* =========================
+       PROFILE
+    ========================= */
 
     .profile-container {
         width: 100%;
@@ -781,9 +1229,6 @@ body {
 
         gap: 18px;
     }
-
-
-    /* Picture */
 
     .profile-image {
         width: 105px;
@@ -796,7 +1241,9 @@ body {
     }
 
 
-    /* Contact */
+    /* =========================
+       CONTACT
+    ========================= */
 
     .contact-card {
         width: auto;
@@ -821,7 +1268,9 @@ body {
     }
 
 
-    /* Social */
+    /* =========================
+       SOCIAL
+    ========================= */
 
     .social-links {
         gap: 12px;
@@ -831,6 +1280,79 @@ body {
 
     .social-links a {
         font-size: 11px;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-section {
+        padding: 80px 20px 50px;
+    }
+
+    .experience-content {
+        width: 100%;
+    }
+
+    .experience-content > h2 {
+        font-size: 23px;
+
+        margin-bottom: 25px;
+    }
+
+    .experience-carousel {
+        gap: 8px;
+    }
+
+    .experience-track {
+        width: calc(100vw - 105px);
+
+        max-width: 330px;
+
+        min-height: 230px;
+    }
+
+    .experience-item {
+        width: 100%;
+
+        min-width: 100%;
+
+        min-height: 230px;
+
+        padding: 20px;
+    }
+
+    .experience-item h3 {
+        font-size: 16px;
+    }
+
+    .experience-company {
+        font-size: 13px;
+    }
+
+    .experience-date {
+        font-size: 10px;
+    }
+
+    .experience-description {
+        font-size: 11px;
+
+        line-height: 1.5;
+    }
+
+    .experience-arrow {
+        width: 30px;
+
+        height: 30px;
+
+        font-size: 15px;
+    }
+
+    .experience-form {
+        width: 100%;
+
+        padding: 70px 25px 25px;
     }
 
 
@@ -907,6 +1429,15 @@ body {
 ========================= */
 
 @media (min-width: 601px) and (max-width: 1024px) {
+
+    /* =========================
+       HOME
+    ========================= */
+
+    .home-section {
+        min-height: 100vh;
+        height: 100vh;
+    }
 
 
     /* =========================
@@ -1006,9 +1537,6 @@ body {
         box-sizing: border-box;
     }
 
-
-    /* Services */
-
     .services {
         width: 43%;
     }
@@ -1016,9 +1544,6 @@ body {
     .services h2 {
         font-size: 24px;
     }
-
-
-    /* Profile */
 
     .profile-container {
         width: 52%;
@@ -1036,9 +1561,6 @@ body {
         height: 155px;
     }
 
-
-    /* Contact */
-
     .contact-card {
         min-width: 200px;
     }
@@ -1049,6 +1571,28 @@ body {
 
     .contact-card p {
         font-size: 13px;
+    }
+
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-section {
+        padding: 90px 6% 60px;
+    }
+
+    .experience-content {
+        width: 85%;
+    }
+
+    .experience-track {
+        width: 360px;
+    }
+
+    .experience-item {
+        width: 360px;
+        min-width: 360px;
     }
 
 
@@ -1083,16 +1627,17 @@ body {
 
 }
 
+
 /* =========================
    ACCESSIBILITY
 ========================= */
 
-/* Visible keyboard focus */
-
 a:focus-visible,
 button:focus-visible {
     outline: 2px solid #ff0808;
+
     outline-offset: 4px;
+
     border-radius: 4px;
 }
 
@@ -1111,14 +1656,17 @@ button:focus-visible {
     *::before,
     *::after {
         animation-duration: 0.01ms !important;
+
         animation-iteration-count: 1 !important;
+
         transition-duration: 0.01ms !important;
+
         scroll-behavior: auto !important;
     }
 
     .reveal {
         opacity: 1;
+
         transform: none;
     }
 }
-

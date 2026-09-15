@@ -3,17 +3,27 @@
   <head>
 
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
 
+
     <!-- =========================
          GOOGLE FONTS
     ========================= -->
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -35,34 +45,43 @@
       rel="stylesheet"
     />
 
+
     <!-- =========================
          WEBSITE TITLE
     ========================= -->
 
     <title>MDWADUD</title>
 
+
     <!-- =========================
          CSS
     ========================= -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
 
   </head>
 
 
   <body>
 
+
     <!-- =====================================================
          PAGE 1: HOME / HERO
     ====================================================== -->
 
-    <section class="home-section" id="home">
+    <section
+      class="home-section"
+      id="home"
+    >
 
       <!-- Background Image -->
 
       <img
         class="background"
-        src="images/banner.jpg"
+        src="{{ url_for('static', filename='images/banner.jpg') }}"
         alt="laptop"
       />
 
@@ -122,26 +141,39 @@
 
         <!-- Navigation Menu -->
 
-        <ul class="navi" id="mobileMenu">
+        <ul
+          class="navi"
+          id="mobileMenu"
+        >
 
           <li class="lil">
-            <a href="#contact">Contact</a>
+            <a href="#contact">
+              Contact
+            </a>
           </li>
 
           <li class="lil">
-            <a href="#services">Services</a>
+            <a href="#services">
+              Services
+            </a>
           </li>
 
           <li class="lil">
-            <a href="#skill">Skill</a>
+            <a href="#skill">
+              Skill
+            </a>
           </li>
 
           <li class="lil">
-            <a href="#about">About</a>
+            <a href="#about">
+              About
+            </a>
           </li>
 
           <li class="lil">
-            <a href="#home">Home</a>
+            <a href="#home">
+              Home
+            </a>
           </li>
 
         </ul>
@@ -241,7 +273,7 @@
         <div class="profile-image reveal">
 
           <img
-            src="images/Shiplu-pic88.jpg"
+            src="{{ url_for('static', filename='images/Shiplu-pic88.jpg') }}"
             alt="Shiplu"
           />
 
@@ -334,7 +366,212 @@
 
 
     <!-- =====================================================
-         PAGE 3: SKILLS
+         PAGE 3: EXPERIENCE CAROUSEL
+    ====================================================== -->
+
+    <section
+      class="experience-section"
+      id="experience"
+    >
+
+      <div class="experience-content">
+
+        <h2>Experience</h2>
+
+
+        <!-- =========================
+             EXPERIENCE CAROUSEL
+        ========================= -->
+
+        <div class="experience-carousel">
+
+
+          <!-- Previous Experience -->
+
+          <button
+            type="button"
+            class="experience-arrow"
+            id="experiencePrev"
+          >
+            ←
+          </button>
+
+
+          <!-- Experience Cards -->
+
+          <div
+            id="experienceList"
+            class="experience-track"
+          >
+
+            {% for experience in experiences %}
+
+              <div class="experience-item">
+
+                <h3>
+                  {{ experience["title"] }}
+                </h3>
+
+                <p class="experience-company">
+                  {{ experience["company"] }}
+                </p>
+
+                <p class="experience-date">
+                  {{ experience["start_date"] }}
+                  -
+                  {{ experience["end_date"] }}
+                </p>
+
+                <p class="experience-description">
+                  {{ experience["description"] }}
+                </p>
+
+              </div>
+
+            {% endfor %}
+
+          </div>
+
+
+          <!-- Next Experience -->
+
+          <button
+            type="button"
+            class="experience-arrow"
+            id="experienceNext"
+          >
+            →
+          </button>
+
+        </div>
+
+
+        <!-- =========================
+             EXPERIENCE DOTS
+        ========================= -->
+
+        <div
+          id="experienceDots"
+          class="experience-dots"
+        ></div>
+
+
+        <!-- =========================
+             ADD EXPERIENCE BUTTON
+        ========================= -->
+
+        <button
+          id="addExperienceButton"
+          type="button"
+          onclick="document.getElementById('experienceForm').classList.add('show')"
+        >
+          + Add Experience
+        </button>
+
+
+        <!-- =========================
+             ADD EXPERIENCE FORM
+        ========================= -->
+
+        <div
+          id="experienceForm"
+          class="experience-form"
+        >
+
+          <!-- Close Button -->
+
+          <button
+            type="button"
+            id="closeExperienceForm"
+            class="close-experience-form"
+            onclick="document.getElementById('experienceForm').classList.remove('show')"
+          >
+            ×
+          </button>
+
+
+          <h3>
+            Add Experience
+          </h3>
+
+
+          <!-- Company -->
+
+          <input
+            type="text"
+            id="company"
+            placeholder="Company"
+          >
+
+
+          <!-- Job Title -->
+
+          <input
+            type="text"
+            id="title"
+            placeholder="Job Title"
+          >
+
+
+          <!-- Start Date -->
+
+          <input
+            type="text"
+            id="startDate"
+            placeholder="Start Date"
+          >
+
+
+          <!-- End Date -->
+
+          <input
+            type="text"
+            id="endDate"
+            placeholder="End Date"
+          >
+
+
+          <!-- Description -->
+
+          <textarea
+            id="description"
+            placeholder="Description"
+          ></textarea>
+
+
+          <!-- Current Position -->
+
+          <label>
+
+            <input
+              type="checkbox"
+              id="isCurrent"
+            >
+
+            Current Position
+
+          </label>
+
+
+          <!-- Save Experience -->
+
+          <button
+            type="button"
+            id="saveExperienceButton"
+          >
+            Save Experience
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAGE 4: SKILLS
     ====================================================== -->
 
     <section
@@ -344,14 +581,20 @@
 
       <div class="skill-content">
 
-        <h2>Skills</h2>
+        <h2>
+          Skills
+        </h2>
 
 
-        <!-- Programming -->
+        <!-- =========================
+             PROGRAMMING
+        ========================= -->
 
         <div class="skill-category">
 
-          <h3>Programming</h3>
+          <h3>
+            Programming
+          </h3>
 
           <div class="skill-list">
 
@@ -365,11 +608,15 @@
         </div>
 
 
-        <!-- Cloud -->
+        <!-- =========================
+             CLOUD & DEVOPS
+        ========================= -->
 
         <div class="skill-category">
 
-          <h3>Cloud &amp; DevOps</h3>
+          <h3>
+            Cloud &amp; DevOps
+          </h3>
 
           <div class="skill-list">
 
@@ -384,11 +631,15 @@
         </div>
 
 
-        <!-- Systems & Security -->
+        <!-- =========================
+             SYSTEMS & SECURITY
+        ========================= -->
 
         <div class="skill-category">
 
-          <h3>Systems &amp; Security</h3>
+          <h3>
+            Systems &amp; Security
+          </h3>
 
           <div class="skill-list">
 
@@ -407,7 +658,7 @@
 
 
     <!-- =====================================================
-         PAGE 4: ABOUT
+         PAGE 5: ABOUT
     ====================================================== -->
 
     <section
@@ -417,15 +668,15 @@
 
       <div class="about-content">
 
-        <h2>About</h2>
-
+        <h2>
+          About
+        </h2>
 
         <p>
           I am an IT Analyst and Systems Analyst with experience
           in enterprise IT, software development, cloud technologies,
           and identity and access management.
         </p>
-
 
         <p>
           I work with Python, Java, C#, SQL, AWS, Azure, Linux,
@@ -442,7 +693,9 @@
          JAVASCRIPT
     ====================================================== -->
 
-    <script src="script.js"></script>
+    <script
+      src="{{ url_for('static', filename='script.js') }}"
+    ></script>
 
   </body>
 </html>
